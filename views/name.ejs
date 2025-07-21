@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Your Name</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 2rem 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form-container h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        color: #333;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        transition: border 0.3s ease;
+      }
+
+      input[type="text"]:focus {
+        border-color: #4facfe;
+        outline: none;
+      }
+
+      button {
+        width: 100%;
+        background-color: #4facfe;
+        color: white;
+        border: none;
+        padding: 0.8rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #00c6ff;
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 480px) {
+        .form-container {
+          padding: 1.5rem;
+        }
+
+        .form-container h2 {
+          font-size: 1.5rem;
+        }
+
+        input[type="text"], button {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-container" action="/tracker" method="POST">
+      <h2>Enter Your Name</h2>
+      <input type="text" name="username" required placeholder="Your name" />
+      <button type="submit">Start Tracking</button>
+    </form>
+  </body>
+</html>
